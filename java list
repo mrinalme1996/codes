@@ -1,0 +1,45 @@
+import java.util.*;
+
+public class HELLO
+{
+
+    public static void main(String[] args)
+    {
+
+        Scanner sc =new Scanner(System.in);
+        int size=sc.nextInt();
+        LinkedList<Integer> li=new LinkedList<Integer>();
+        for(int i=0;i<size;i++)
+        {
+            int value=sc.nextInt();
+            li.add(value);
+        }
+        int q=sc.nextInt();
+        for(int i=0;i<q;i++)
+
+        {
+            String s=sc.next();
+            if(s.equals("Insert"))
+            {
+                int index=sc.nextInt();
+                int value=sc.nextInt();
+                li.add(index,value);
+            }
+            else if(s.equals("Delete"))
+            {
+                int rem=sc.nextInt();
+                li.remove(rem);
+            }
+
+        }
+        for(int i=0;i<li.size();i++)
+        {
+            System.out.print(" "+li.get(i));
+        }
+
+
+    }
+
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+}
